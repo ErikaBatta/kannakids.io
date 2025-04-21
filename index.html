@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!--aqui encabezado informacion comercial, logo y navegador fijo-->
+     
+     <div class="contenedor1">
+       <div class="item">
+         Descuentos del 10% en toda la tienda
+       </div>
+     </div>
+    <section id="portfolio">
+         <div class="gallery">
+             <div class="project">
+               <img class="proyecto" src="image/kanna.png" alt="proyecto1" />
+             </div>
+         </div>
+        </section>
+     
+     <header>
+       <div>mi Sitio</div>
+       <nav>
+        <ul>
+         <li><a href="#about">Tendencias</a></li>
+         <li><a href="catalogo.html">Coleccion</a></li>
+         <li><a href="#contact">Contactanos</a></li>
+         <li><a href="#contacto"></a></li>
+        </ul>
+       </nav>
+     </header>
+
+  <!--aqui informacion de tendencias y de la marca-->
+    
+      <section id="about">
+          <h2>¡Explora nuestras ultimas tendencias y haz que tu pequeño luzca genial!</h2>
+          <p>
+            Descubre nuestros nuevos diseños para esta temporada, donde combina 
+            colores vibrantes con looks frescos, divertidos y modernos, todo lo que necesitas 
+            para vestir a tus hijos con estilo y comodidad.
+          </p>
+      </section>
+    
+    <!--aqui imagenes del portafolio-->
+
+      <section id="portfolio1">
+          <h2>Colección primavera/verano</h2>
+          <p></p>
+          <div class="gallery2">
+              <div class="project1">
+                <img src="image/moda_1.jpg" alt="proyecto2" />
+                <p></p>
+              </div>
+              <div class="project1">
+                  <img src="image/moda_2.jpg" alt="proyecto2" width="600px" height="800px" />
+                  <p></p> 
+              </div>
+              <div class="project1">
+                  <img src="image/moda 3.jpg" alt="proyecto2" />
+                  <p></p>
+              </div>
+              <div class="project1">
+                <img src="image/moda.jpg" alt="proyecto2" />
+                <p></p>
+              </div>
+              
+          </div>
+
+      </section>
+
+      <section>
+        <div class="classflex">
+        
+          <div class="card" style="width: 18rem;">
+              <img src="image/moda_1.jpg" class="card-img-top" alt="imag1" width="300px" height="400px"  >
+              <div class="card-body">
+                <h5 class="card-title">ref 2035-4</h5>
+                <p class="card-text">prendas frescas y sofisticadas, para un dia aventurero y divertido</p>
+                <a href="compras.html" class="btn btn-primary">Quiero esta prenda</a>
+              </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="contact">
+          <h2>contactanos</h2>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Correo</label>
+              <input type="email" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+            
+          <form action="/submit" method="post">
+            <label for="name">nombre:</label>
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">correo electronico:</label>
+            <input type="email" id="email" name="email" required /><br />
+            <label for="message">mensaje</label>
+            <textarea name="message" id="message" required></textarea><br />
+            <input type="submit" value="enviar" />
+          </form>
+      </section>
+</body>
+</html>

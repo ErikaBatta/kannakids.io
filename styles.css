@@ -1,0 +1,178 @@
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: smooth;
+  }
+   
+  header {
+      background: rgb(252, 252, 252);
+      text-align: center;
+      text-decoration-style: dotted;
+      font-family: "Arial Narrow Bold";
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 5px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: right;
+    }
+  
+  header nav ul a {
+    color: rgb(245, 139, 139);
+    text-decoration: dashed;
+    margin-left: 20px;
+    font-weight:100;
+    font-family:  "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+    margin-top: 30px;
+    text-align: center;
+    display: inline;
+   
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+
+  .proyect {  
+      width: 20%;
+      height: 20%;
+    }
+  
+  nav ul {
+  
+    text-align: right;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: rgb(26, 16, 27);
+    text-decoration: rgb(8, 10, 10);
+  }
+  
+  #about h2 {
+      background: rgb(248, 140, 239);
+      color: rgb(8, 8, 8);
+      margin-top: 30px;
+      text-align: center;
+      font-family:  'Arial Narrow', Arial, sans-serif;
+  
+    }
+    
+    #portfolio1 .gallery2 img {
+      width: 100%; /* Ajusta al 100% del contenedor */
+      max-width: 300px; /* Tamaño máximo */
+      height: auto; /* Mantiene la proporción */
+      border-radius: 10px; /* (opcional) Bordes redondeados */
+      object-fit: cover; /* (opcional) Ajusta la imagen sin deformarla */
+    }
+  
+  #about {
+    padding: 5px;
+    background: rgb(255, 166, 255);
+  }
+  #about h2 {
+    margin-top: 30px;
+    font-family:  'Arial Narrow', Arial, sans-serif;
+  
+  }
+  
+  #portfolio .gallery { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+
+  
+  
+  .project1 {
+    width: 700px;
+    padding: 60px;
+    background: rgb(175, 165, 184);
+    border: 1px solid rgb(192, 199, 224);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+  }
+  .contenedor1{
+    top:0;
+    text-align: center;
+    
+  }
+  
+
+  .gallery2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center;
+  }
+
+  .project1 {
+    flex: 1 1 200px;
+    text-align: center;
+  }
+  .classflex img{
+    border-radius: 10px;
+    top: 10px;;
+    left: 10px; ;
+    
+  }
+  .classflex {
+    background: rgb(175, 165, 184);
+    padding: 60px;
+    border: 10px solid rgb(192, 199, 224);
+    width:250px ;
+    height:450px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #contact {
+    padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form label {
+    margin-bottom: 9px;
+  }
+  form input,
+  form textarea {
+    margin-bottom: 1px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  form input[type="submit"] {
+    background: rgb(133, 106, 129);
+    color: rgb(12, 11, 10);
+    border: black;
+    cursor: auto;
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery {
+      flex-direction: row;
+      align-items: end;
+    }
+  }
