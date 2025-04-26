@@ -1,3 +1,4 @@
+/* espacio para la pagina */
 body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -6,7 +7,7 @@ body {
     padding: 0%;
     scroll-behavior: smooth;
   }
-   
+   /* espacio de estilos para el encabezado fijo */
   header {
       background: rgb(252, 252, 252);
       text-align: center;
@@ -32,20 +33,9 @@ body {
     margin-top: 30px;
     text-align: center;
     display: inline;
-   
-  }
-  
-  h2 {
-    margin-top: 0;
   }
 
-  .proyect {  
-      width: 20%;
-      height: 20%;
-    }
-  
   nav ul {
-  
     text-align: right;
   }
   
@@ -58,6 +48,22 @@ body {
     color: rgb(26, 16, 27);
     text-decoration: rgb(8, 10, 10);
   }
+
+  /* finaliza espacio de encabezado fijo */
+
+  /* espacio de estilos para imagen logo */
+  .proyect {  
+    width: 150px;
+    height: auto; /* mantiene la proporción */
+    }
+
+
+ /* espacio de estilos para titulos y parrafos, contenido de la pagina */
+
+    h2 {
+        margin-top: 0;
+      }
+  
   
   #about h2 {
       background: rgb(248, 140, 239);
@@ -67,6 +73,26 @@ body {
       font-family:  'Arial Narrow', Arial, sans-serif;
   
     }
+
+    @keyframes gallery2 {
+        0%   { transform: translateX(0); }
+        33%  { transform: translateX(-300px); }
+        66%  { transform: translateX(-600px); }
+        100% { transform: translateX(0); }
+      }
+
+    @media (max-width: 600px) {
+        /* nav ul {
+          display: block;
+          flex-direction: column;
+          align-items: center;
+        } */
+         
+        .gallery2 {
+          flex-direction: row;
+          align-items: end;
+        }
+      }
     
     #portfolio1 .gallery2 img {
       width: 100%; /* Ajusta al 100% del contenedor */
@@ -93,9 +119,6 @@ body {
     justify-content: center;
   }
   
-
-  
-  
   .project1 {
     width: 700px;
     padding: 60px;
@@ -114,7 +137,6 @@ body {
     
   }
   
-
   .gallery2 {
     display: flex;
     flex-wrap: wrap;
@@ -142,29 +164,59 @@ body {
     justify-content: space-around;
   }
   
+/* finaliza espacio para el contenido de la pagina */
+  /* espacio de estilos para contacto */
+
   #contact {
-    padding: 20px;
+    background-color: #f9f7f7;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
   }
-  form {
+
+  /* form {
     display: flex;
     flex-direction: column;
-  }
+  } */
+ 
   form label {
-    margin-bottom: 9px;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
   }
+
   form input,
   form textarea {
-    margin-bottom: 1px;
+    margin-bottom: 15px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
   }
+
   form input[type="submit"] {
-    background: rgb(133, 106, 129);
-    color: rgb(12, 11, 10);
-    border: black;
-    cursor: auto;
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(252, 106, 220);
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
   }
   
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #434343;
+  }
+
+/* finaliza espacio para contacto */
+
   @media (max-width: 600px) {
     nav ul {
       display: block;
@@ -176,3 +228,4 @@ body {
       align-items: end;
     }
   }
+  
