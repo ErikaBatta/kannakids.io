@@ -1,231 +1,417 @@
 /* espacio para la pagina */
 body {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0%;
-    padding: 0%;
-    scroll-behavior: smooth;
-  }
-   /* espacio de estilos para el encabezado fijo */
-  header {
-      background: rgb(252, 252, 252);
-      text-align: center;
-      text-decoration-style: dotted;
-      font-family: "Arial Narrow Bold";
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 5px;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: right;
-    }
-  
-  header nav ul a {
-    color: rgb(245, 139, 139);
-    text-decoration: dashed;
-    margin-left: 20px;
-    font-weight:100;
-    font-family:  "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode";
-    margin-top: 30px;
-    text-align: center;
-    display: inline;
-  }
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/* espacio de estilos para el banner de navegacion */
 
-  nav ul {
-    text-align: right;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: rgb(26, 16, 27);
-    text-decoration: rgb(8, 10, 10);
-  }
-
-  /* finaliza espacio de encabezado fijo */
-
-  /* espacio de estilos para imagen logo */
-  .proyect {  
-    width: 150px;
-    height: auto; /* mantiene la proporción */
-    }
-
-
- /* espacio de estilos para titulos y parrafos, contenido de la pagina */
-
-    h2 {
-        margin-top: 0;
-      }
-  
-  
-  #about h2 {
-      background: rgb(248, 140, 239);
-      color: rgb(8, 8, 8);
-      margin-top: 30px;
-      text-align: center;
-      font-family:  'Arial Narrow', Arial, sans-serif;
-  
-    }
-
-    @keyframes gallery2 {
-        0%   { transform: translateX(0); }
-        33%  { transform: translateX(-300px); }
-        66%  { transform: translateX(-600px); }
-        100% { transform: translateX(0); }
-      }
-
-    @media (max-width: 600px) {
-        /* nav ul {
-          display: block;
-          flex-direction: column;
-          align-items: center;
-        } */
-         
-        .gallery2 {
-          flex-direction: row;
-          align-items: end;
-        }
-      }
-    
-    #portfolio1 .gallery2 img {
-      width: 100%; /* Ajusta al 100% del contenedor */
-      max-width: 300px; /* Tamaño máximo */
-      height: auto; /* Mantiene la proporción */
-      border-radius: 10px; /* (opcional) Bordes redondeados */
-      object-fit: cover; /* (opcional) Ajusta la imagen sin deformarla */
-    }
-  
-  #about {
-    padding: 5px;
-    background: rgb(255, 166, 255);
-  }
-  #about h2 {
-    margin-top: 30px;
-    font-family:  'Arial Narrow', Arial, sans-serif;
-  
-  }
-  
-  #portfolio .gallery { 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .project1 {
-    width: 700px;
-    padding: 60px;
-    background: rgb(175, 165, 184);
-    border: 1px solid rgb(192, 199, 224);
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    
-  }
-  .contenedor1{
-    top:0;
-    text-align: center;
-    
-  }
-  
-  .gallery2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espacio entre las imágenes */
-    justify-content: center;
-  }
-
-  .project1 {
-    flex: 1 1 200px;
-    text-align: center;
-  }
-  .classflex img{
-    border-radius: 10px;
-    top: 10px;;
-    left: 10px; ;
-    
-  }
-  .classflex {
-    background: rgb(175, 165, 184);
-    padding: 60px;
-    border: 10px solid rgb(192, 199, 224);
-    width:250px ;
-    height:450px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-/* finaliza espacio para el contenido de la pagina */
-  /* espacio de estilos para contacto */
-
-  #contact {
-    background-color: #f9f7f7;
-    padding: 30px 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+.banner-navegacion {
+    top: 0;
     width: 100%;
-    max-width: 400px;
+    background-color: rgb(253, 252, 252);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 25px 4px rgba(245, 171, 245, 0.719)
+}
+
+.navegacion ul {
+  list-style: none;
+  display: flex;               /* Usamos flexbox para alinear horizontalmente */
+  justify-content: center;     /* Centrar los elementos horizontalmente */
+  text-align: center;
+}
+
+.navegacion ul li {
+  margin: 0 10px;              /* Espaciado entre los elementos */
+  display: inline;
+}
+
+.navegacion ul li a {
+  color: #030303cc;              /* Color de texto */
+  font-family:  "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode";
+  text-decoration: none;       /* Eliminar subrayado */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;          /* Espaciado interno para los enlaces */
+  transition: background-color 0.4s ease; /* Transición suave en el fondo */
+}
+
+.navegacion ul li a:hover {
+  background-color: #efa4efab;   /* Fondo oscuro al pasar el mouse */
+  border-radius: 10px;           /* Bordes redondeados */
+}
+
+/* finaliza estilos banner de navegacion */
+
+/* Estilos para imagen logo */
+
+.proyect {  
+  width: 300px;
+  height: 70px; /* en auto mantiene la proporción de la imagen */
+  /* opacity: 0.5; define la opacidad de la imagen */
+}
+
+/* Estilos de video e imagenes*/
+
+.banner {
+  margin-top: 60px;
+  width: 100%;
+  height: 100vh;      /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  box-sizing: border-box; 
+  background-color: rgba(253, 168, 240, 0.913);
+  /* Asegura que cualquier parte recortada no se vea */
+  overflow: hidden; 
+}
+
+.banner img {
+  /* Ajusta la imagen ancho */
+  width: 95%;
+  margin: 10px;
+  /* Mantiene la relación de aspecto de la imagen alto */
+  height: 500px;
+  border-radius:8%; /* Redondea las esquinas de la imagen */
+  object-fit: cover;
+  padding: 10px 60px;
+  background: #00000080;
+  box-shadow: -10px -10px 30px 85px  rgba(254, 154, 234, 0.831); 
+}
+  
+.banner a {
+  display: flexbox;
+  padding: 10px;
+  background-color: #12000fb9;
+  color: #fcf7f7;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:10px;
+}
+
+.banner a:hover {
+  background-color: #fa6fd5e1;   /* Fondo oscuro al pasar el mouse */
+  color: #060606;
+}
+
+.banner video {
+  z-index: -1;
+  flex: 1;
+  width: 100%;
+  height: 130vh;
+  margin: 0px;
+  border: none;
+  padding: 0%;
+  top: 0;               /* Alinea el video al principio de la página */
+  left: 0;              /* Alinea el video al borde izquierdo */
+}
+
+.circulo {
+  width: 40px;           /* Ancho del círculo */
+  height: 40px;          /* Alto del círculo */
+  background-color: rgba(144, 103, 148, 0.658); /* Color de fondo del círculo */
+  border-radius: 50%;     /* le da la forma circular */
+  position: absolute;     /* Permite posicionarlo dentro del banner */
+  top: 50%;               /* Coloca el círculo en la mitad de la altura */
+  left: 50%;              /* Coloca el círculo en la mitad del ancho */
+  transform: translate(20px, 8px); /* Centra el círculo perfectamente */
+}
+
+/* finaliza Estilos banner */
+
+/* Estilos para titulos y parrafos, contenido de la pagina */
+
+#about h2 {
+  margin-top: 60px;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  font-family: "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode";
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Estilos para imagenes */
+
+.slider img {
+  display: flex;
+  margin-top: 0px;
+  width: 300px; /* Ajusta al 100% del contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* (opcional) Bordes redondeados */
+  object-fit: cover; /* (opcional) Ajusta la imagen sin deformarla */
+  box-shadow: 0px -5px 19px 5px  rgba(246, 198, 244, 0.705); 
+}
+
+
+.slider {
+  justify-content: flex-start;
+  width: 88%;               /* ancho visible (una imagen) */
+  overflow: hidden;           /* oculta lo que se desborda */
+  margin: 30px;
+  margin-left: 90px;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: slide 10s infinite;
+  gap: 30px; 
+  
+}
+
+/* Animación */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(100px); }
+  70%  { transform: translateX(-400px); }
+  100% { transform: translateX(0); }
+}
+
+.navegacion2 a {
+  position: absolute; top: 1450px; left: 700px;
+  padding: 10px;
+  background-color: #320e2cab;
+  color: #f9f8f8;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:10px;
+  transition: background-color 0.9s ease;
+}
+.navegacion2 a:hover {
+  background-color: #f681f6bd;   /* Fondo oscuro al pasar el mouse */
+}
+
+/* finaliza espacio para el contenido de la pagina */
+
+/* estilos introduccion al blog */
+.blog-container {
+  max-width: 90%;
+  height: 500px;
+  margin: 40px 80px;
+  margin-left: 100px;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column; 
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-container:hover {
+  transform: scale(1.01);
+}
+
+.blog-post {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  background-color: rgba(253, 252, 252, 0.9);
+  border: 2px double #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  .blog-post {
+    flex-direction: column;
   }
 
-  /* form {
+  .blog-post img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog-post img {
+  display: flex;
+  margin: 0px;
+  width: 28%;
+  height: auto;
+  box-shadow: 0 0px 60px 20px rgba(228, 198, 228, 0.482);
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-content h2 {
+  margin: 0px;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 17px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.blog-content a {
+  display: inline-block;
+  margin: 10px;
+  color: #d23abe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/*espacio de estilos para contacto */
+
+
+.footer {
+  background-color: #f4f0f0;
+  padding: 30px 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #2b2929;
+  border-top: 1px solid #c7c6c6;
+}
+
+.footer-content {
+  /* max-width: 900px; */
+  margin-left: 45%;
+  justify-content: space-between;
+  align-items: right;
+  flex-wrap: wrap;
+  
+}
+
+.footer-links,
+.footer-social {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.footer-links a,
+.footer-social a {
+  margin: 0 10px;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #c144b2;
+}
+
+@media (max-width: 600px) {
+  .footer-links,
+  .footer-social {
     display: flex;
     flex-direction: column;
-  } */
- 
-  form label {
-    margin-bottom: 5px;
-    display: block;
-    color: #555;
+    gap: 10px;
   }
 
-  form input,
-  form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+  .footer-links a,
+  .footer-social a {
+    margin: 5px 0;
   }
+}
 
-  form input[type="submit"] {
-    margin: 10px;
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(252, 106, 220);
-    color: rgb(7, 7, 7);
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  h3 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #434343;
-  }
+
+#contact {
+  padding: 0px;
+  margin-top: -300px;
+  margin-left: 60px;
+  padding-top: 0;
+  background-color: #f9f7f7;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  max-width: 400px;
+  height: 50%;
+}
+
+form label {
+  margin-bottom: 5px;
+  display: inline;
+  color: #555;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+form input[type="submit"] {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(247, 177, 232);
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 3s ease;
+}
+form input[type="submit"]:hover {
+  background-color: #f974f9fd; 
+  color: #010101;
+}
+
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #434343;
+}
+
+
+
+
+
 
 /* finaliza espacio para contacto */
 
-  @media (max-width: 600px) {
-    nav ul {
-      display: block;
-      flex-direction: column;
-      align-items: center;
-    }
-    .gallery {
-      flex-direction: row;
-      align-items: end;
-    }
+@media (max-width: 600px) {
+  nav ul {
+    display: block;
+    flex-direction: column;
+    align-items: center;
   }
-  
+  .gallery {
+    flex-direction: row;
+    align-items: end;
+  }
+}
