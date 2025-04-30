@@ -50,8 +50,6 @@ body {
     border-radius: 10px;           /* Bordes redondeados */
   }
   
-  /* finaliza estilos banner de navegacion */
-  
   /* Estilos para imagen logo */
   
   .proyect {  
@@ -59,28 +57,69 @@ body {
     height: 70px; /* en auto mantiene la proporción de la imagen */
     /* opacity: 0.5; define la opacidad de la imagen */
   }
+/* finaliza estilos banner de navegacion */
 
+/* contenido */
+
+.contenedor1{
+  margin-top: 75px;
+  text-align: center;
+  background-color: #c144b2;
+  font-weight: bold;
+}
 
 .classflex{
-    margin-top: 80px;
+    margin-top: 10px;
     border-radius: 20px;
     display: inline-block;
     gap: 10px; /* espacio entre imágenes */
     flex-wrap: wrap;
 }
+.classflex:hover{
+  transform: scale(1.01);
+}
 
 .card{
     margin: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     border-radius: 20px;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 300px;
+    max-width: 200px;
     width: 100%;
     height: auto;
+    transition: transform 0.9s ease;
+}
+.card:hover{
+  transform: scale(1.01);
 }
 
+.card img {
+  width: 80%; 
+  height: auto; 
+}
+
+
+.card-body a{
+  background-color: #f78fea;
+  color: #010101;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  text-align: center;
+  margin: 10px;
+  margin-left: 20px;
+  overflow: hidden;
+  transition: bankground-color 0.9s ease;
+}
+.card-body a:hover{
+  background-color: #cff78f;
+}
+
+
+/* pie de pagina */
 
 .footer {
     background-color: #f4f0f0;

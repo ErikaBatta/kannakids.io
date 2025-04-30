@@ -1,4 +1,5 @@
 /* espacio para la pagina */
+/* espacio para la pagina */
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -117,17 +118,6 @@ body {
   left: 0;              /* Alinea el video al borde izquierdo */
 }
 
-.circulo {
-  width: 40px;           /* Ancho del círculo */
-  height: 40px;          /* Alto del círculo */
-  background-color: rgba(144, 103, 148, 0.658); /* Color de fondo del círculo */
-  border-radius: 50%;     /* le da la forma circular */
-  position: absolute;     /* Permite posicionarlo dentro del banner */
-  top: 50%;               /* Coloca el círculo en la mitad de la altura */
-  left: 50%;              /* Coloca el círculo en la mitad del ancho */
-  transform: translate(20px, 8px); /* Centra el círculo perfectamente */
-}
-
 /* finaliza Estilos banner */
 
 /* Estilos para titulos y parrafos, contenido de la pagina */
@@ -189,8 +179,9 @@ p {
 }
 
 .navegacion2 a {
-  position: absolute; top: 1450px; left: 700px;
-  padding: 10px;
+  display: inline-block;
+  margin-left: 45%;
+  padding: 5px;
   background-color: #320e2cab;
   color: #f9f8f8;
   text-decoration: none;
@@ -208,8 +199,7 @@ p {
 .blog-container {
   max-width: 90%;
   height: 500px;
-  margin: 40px 80px;
-  margin-left: 100px;
+  margin: 80px 80px;
   margin-top: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -346,7 +336,7 @@ p {
 
 #contact {
   padding: 0px;
-  margin-top: -300px;
+  margin-top: -350px;
   margin-left: 60px;
   padding-top: 0;
   background-color: #f9f7f7;
