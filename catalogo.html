@@ -95,19 +95,19 @@
     </div>
  
     <section id="contact">
-     <h3>CONTÁCTANOS</h3>
-     <form action="/submit" method="post">
-       <label for="name">nombre:</label>
-       <input type="text" id="name" name="name" required /><br />
-       <label for="email">correo electronico:</label>
-       <input type="email" id="email" name="email" required /><br />
-       <label for="message">mensaje</label>
-       <textarea name="message" id="message" required></textarea><br />
-       <input type="submit" value="enviar" />
-     </form>
-   </section>
+      <h3>CONTÁCTANOS</h3>
+      <form id="miformulario" action="/submit" method="post" onsubmit="vaciar.call(this);returmfalse;">
+        <label for="name">nombre:</label>
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">correo electronico:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="message">mensaje</label>
+        <textarea name="message" id="message" required></textarea><br />
+        <input type="submit" value="enviar" />
+      </form>
+    </section>
 </footer>
 
-<script src="catalogo.js"></script>
+  <script src="catalogo.js"></script>
 </body>
 </html>

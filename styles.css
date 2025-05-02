@@ -1,5 +1,4 @@
 /* espacio para la pagina */
-/* espacio para la pagina */
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -14,13 +13,13 @@ body {
 .banner-navegacion {
     top: 0;
     width: 100%;
-    background-color: rgb(253, 252, 252);
+    background-color: rgb(255, 255, 255);
     position: fixed;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 10px 25px 4px rgba(245, 171, 245, 0.719)
+    box-shadow: 0px 0px 15px 4px rgba(245, 171, 245, 0.637)
 }
 
 .navegacion ul {
@@ -61,61 +60,80 @@ body {
   /* opacity: 0.5; define la opacidad de la imagen */
 }
 
-/* Estilos de video e imagenes*/
+/* Estilos baner publicitario*/
 
 .banner {
-  margin-top: 60px;
+  position: relative;
+  margin-top: 75px;
   width: 100%;
   height: 100vh;      /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 0px;
-  box-sizing: border-box; 
-  background-color: rgba(253, 168, 240, 0.913);
   /* Asegura que cualquier parte recortada no se vea */
   overflow: hidden; 
 }
 
-.banner img {
+.slide {
+  display: none;
+  height: auto;
+}
+
+.slide img {
   /* Ajusta la imagen ancho */
-  width: 95%;
-  margin: 10px;
+  width: 100%;
+  margin: 0px;
   /* Mantiene la relación de aspecto de la imagen alto */
-  height: 500px;
-  border-radius:8%; /* Redondea las esquinas de la imagen */
+  height: 95%;
   object-fit: cover;
-  padding: 10px 60px;
-  background: #00000080;
-  box-shadow: -10px -10px 30px 85px  rgba(254, 154, 234, 0.831); 
+
+}
+
+.slide.active {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  height: 95%;
+  object-fit: cover;
 }
   
-.banner a {
-  display: flexbox;
-  padding: 10px;
-  background-color: #12000fb9;
-  color: #fcf7f7;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius:10px;
-}
-
-.banner a:hover {
-  background-color: #fa6fd5e1;   /* Fondo oscuro al pasar el mouse */
-  color: #060606;
-}
-
-.banner video {
-  z-index: -1;
-  flex: 1;
-  width: 100%;
-  height: 130vh;
-  margin: 0px;
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
-  padding: 0%;
-  top: 0;               /* Alinea el video al principio de la página */
-  left: 0;              /* Alinea el video al borde izquierdo */
+  color: rgb(8, 8, 8);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+
+.banner-link {
+  position: absolute;
+  display: flex;
+  top: 66%;     
+  right: 70%;        
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #f3ecc171;
+  color: #090918;
+  transition: background 0.3s;
+}
+
+.banner-link:hover {
+  background: rgb(248, 250, 147);
+  color: #090918;
 }
 
 /* finaliza Estilos banner */
